@@ -1,0 +1,78 @@
+@font-face {
+    font-family: GM;
+    src: url(/assets/fonts/GeistMono.ttf);
+}
+
+:root {
+    --green: #00CA4E;
+    --black: #323232;
+    --gray: #E0DDD6;
+    --white: #fff;
+}
+
+* {
+    margin: 0px;
+    font-family: GM, sans-serif;
+}
+
+.my-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green);
+    padding: 1rem;
+    color:var(--black);
+    position: relative;
+    font-weight: 800;
+}
+
+.my-nav a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-items {
+    display: flex;
+    gap: 15px;
+}
+
+@media (min-width: 320px) and (max-width: 430px) {
+    .menu-label{
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 20px;
+        padding: 2rem 0rem;
+        top: 60px;
+        left: 0px;
+        width: 100%;
+        background-color: var(--black);
+    }
+
+    .nav-items a {
+        color:var(--green);
+        padding: 1rem 2rem;
+    }
+
+ 
+
+    #menu-toggle:checked ~ .nav-items {
+        display: flex;
+    }
+    
+}
