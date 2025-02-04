@@ -1,6 +1,6 @@
 @font-face {
     font-family: GM;
-    src: url(/assets/fonts/GeistMono.ttf);
+    src: url(./assets/fonts/GeistMono.ttf);
 }
 
 :root {
